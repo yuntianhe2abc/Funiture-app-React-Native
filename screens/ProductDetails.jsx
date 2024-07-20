@@ -1,8 +1,13 @@
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import React, { useState } from "react";
 import styles from "./productDetails.style";
-import { Ionicons, SimpleLineIcons } from "@expo/vector-icons";
-import { COLORS } from "../constants";
+import {
+  Ionicons,
+  MaterialCommunityIcons,
+  SimpleLineIcons,
+  Fontisto,
+} from "@expo/vector-icons";
+import { COLORS, SIZES } from "../constants";
 
 const ProductDetails = ({ navigation }) => {
   const [count, setCount] = useState(1);
@@ -10,7 +15,9 @@ const ProductDetails = ({ navigation }) => {
     setCount(count + 1);
   };
   const decrement = () => {
-    setCount(count - 1);
+    if (count >= 1) {
+      setCount(count - 1);
+    }
   };
   return (
     <View style={styles.container}>
@@ -53,6 +60,36 @@ const ProductDetails = ({ navigation }) => {
               <SimpleLineIcons name="minus" size={20} />
             </TouchableOpacity>
           </View>
+        </View>
+        <View style={styles.descriptionWrapper}>
+          <Text style={styles.description}>Description</Text>
+          <Text style={styles.descText}>
+            In a quaint village nestled between rolling hills and lush forests,
+            life moved at a gentle pace. The villagers, with their warm smiles
+            and kind hearts, lived in harmony with nature, celebrating the
+            simple joys of everyday life.
+          </Text>
+        </View>
+        <View style={{ marginBottom: SIZES.small }}>
+          <View style={styles.location}>
+            <View style={{ flexDirection: "row" }}>
+              <Ionicons name="location-outline" size={20} />
+              <Text>Dallas</Text>
+            </View>
+            <View style={{ flexDirection: "row" }}>
+              <MaterialCommunityIcons name="truck-delivery-outline" size={20} />
+              <Text>Free Delivery</Text>
+            </View>
+          </View>
+        </View>
+        <View style={styles.cartRow}>
+          <TouchableOpacity onPress={() => {}} style={styles.cartBtn}>
+            <Text style={styles.cartText}>BUY NOW</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => {}} style={styles.addCart}>
+            <Fontisto name="shopping-bag" size={22} color={COLORS.lightWhite} />
+          </TouchableOpacity>
         </View>
       </View>
     </View>

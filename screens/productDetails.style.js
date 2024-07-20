@@ -26,6 +26,35 @@ const styles = StyleSheet.create({
     borderTopLeftRadius: SIZES.medium,
     borderTopRightRadius: SIZES.medium,
   },
+  cartRow: {
+    paddingBottom: SIZES.small,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    width: SIZES.width,
+  },
+  cartBtn: {
+    width: SIZES.width * 0.7,
+    backgroundColor: COLORS.black,
+    padding: SIZES.small / 2,
+    borderRadius: SIZES.large,
+    marginLeft: 12,
+  },
+  cartText: {
+    marginLeft: SIZES.small,
+    fontFamily: "bold",
+    fontSize: SIZES.medium,
+    color: COLORS.lightWhite,
+  },
+  addCart: {
+    borderRadius: "50%",
+    margin: SIZES.small,
+    width: 37,
+    height: 37,
+    backgroundColor: COLORS.black,
+    alignItems: "center",
+    justifyContent: "center",
+  },
   titleRow: {
     marginHorizontal: 20,
     paddingBottom: SIZES.small,
@@ -43,6 +72,28 @@ const styles = StyleSheet.create({
     width: SIZES.width - 10,
     top: 5,
   },
+  descriptionWrapper: {
+    marginTop: SIZES.large * 2,
+    marginHorizontal: SIZES.large,
+  },
+  description: {
+    fontFamily: "medium",
+    fontSize: SIZES.large - 2,
+  },
+  descText: {
+    fontFamily: "regular",
+    fontSize: SIZES.small,
+    textAlign: "justify",
+    marginBottom: SIZES.large,
+  },
+  location: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    backgroundColor: COLORS.secondary,
+    padding: 5,
+    borderRadius: SIZES.large,
+  },
   rating: {
     top: SIZES.large,
     flexDirection: "row",
@@ -50,7 +101,11 @@ const styles = StyleSheet.create({
     alignContent: "center",
     marginHorizontal: SIZES.large,
   },
-  ratingText: {},
+  ratingText: {
+    color: COLORS.gray,
+    fontFamily: "medium",
+    paddingHorizontal: SIZES.xSmall,
+  },
   title: {
     fontFamily: "bold",
     fontSize: SIZES.large,
