@@ -2,5 +2,5 @@ import Search from "./Search";
 import Home from "./Home";
 import Profile from "./Profile";
 import Cart from "./Cart";
-
-export { Search, Home, Cart, Profile };
+import ProductDetails from "./ProductDetails";
+export { Search, Home, Cart, ProductDetails, Profile };
